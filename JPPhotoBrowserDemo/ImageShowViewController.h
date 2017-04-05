@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MoreImageViewController : UIViewController
+@interface ImageShowViewController : UIViewController
 
 @end

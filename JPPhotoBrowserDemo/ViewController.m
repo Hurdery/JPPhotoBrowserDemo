@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "MoreImageViewController.h"
+#import "ImageShowViewController.h"
 
 @interface ViewController ()
 
@@ -28,8 +28,8 @@
 
 - (IBAction)ClickMe:(id)sender {
     
-    MoreImageViewController *moreVC = [[MoreImageViewController alloc] init];
-    [self.navigationController pushViewController:moreVC animated:YES];
+    ImageShowViewController *imageShowVC = [[ImageShowViewController alloc] init];
+    [self.navigationController pushViewController:imageShowVC animated:YES];
 }
 
 @end

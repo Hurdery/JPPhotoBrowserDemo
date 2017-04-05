@@ -6,16 +6,10 @@
 //  Copyright © 2017年 dongjiangpeng. All rights reserved.
 //
 
-#import "JPMoreImageView.h"
-#import "UIView+JP_Frame.h"
+#import "JPImageShowBackView.h"
+#import "JPPhotoBrowserController.h"
 
-#define ScreenW [UIScreen mainScreen].bounds.size.width
-#define ScreenH [UIScreen mainScreen].bounds.size.height
-
-static CGFloat imageIntterMargin = 8;
-static CGFloat imageOutterMargin = 12;
-
-@implementation JPMoreImageView
+@implementation JPImageShowBackView
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
@@ -30,7 +24,7 @@ static CGFloat imageOutterMargin = 12;
 #pragma mark - 设置图片UI
 - (void)p_SetupImagesUI{
     
-//    self.backgroundColor = self.superview.backgroundColor;
+
     self.backgroundColor = [UIColor yellowColor];
     
     //超出边界的内容不显示
@@ -54,11 +48,11 @@ static CGFloat imageOutterMargin = 12;
         NSInteger col = i % count;
         
         //图片的宽高
-        CGFloat imageWH = (ScreenW - 2*imageOutterMargin -2*imageIntterMargin)/3;
+        CGFloat imageWH = (ImageBackViewW - 2*ImageOutterMargin -2*ImageIntterMargin)/3;
         
         //计算x/y
-        CGFloat imageX = col * (imageWH + imageIntterMargin) + imageOutterMargin;
-        CGFloat imageY = row * (imageWH + imageIntterMargin) + imageOutterMargin;
+        CGFloat imageX = col * (imageWH + ImageIntterMargin) + ImageOutterMargin;
+        CGFloat imageY = row * (imageWH + ImageIntterMargin) + ImageOutterMargin;
         
         imageV.frame = CGRectMake(imageX, imageY, imageWH, imageWH);
         
@@ -88,10 +82,19 @@ static CGFloat imageOutterMargin = 12;
             imageV = (UIImageView *)self.subviews[i+1];
         }
         imageV.hidden = NO;
+        
+        [imageV jp_setImageWithURL:[NSURL URLWithString:imageUrls[i]] placeholderImage:nil];
     }
     
     self.jp_h = [self p_UpdateViewHeightWithImageCount:imageUrls.count].height;
     self.jp_w = [self p_UpdateViewHeightWithImageCount:imageUrls.count].width;
+    
+    if (imageUrls.count == 1) {
+        
+        UIImageView *firstImage = (UIImageView *)self.subviews.firstObject;
+        firstImage.jp_w = self.jp_w - 2*ImageOutterMargin;
+        firstImage.jp_h = self.jp_h - 2*ImageOutterMargin;
+    }
 }
 
 #pragma mark -根据图片的个数更新View高度
@@ -104,22 +107,53 @@ static CGFloat imageOutterMargin = 12;
     
     if (imageCount == 1) {
         
-        return CGSizeMake(ScreenW-2*imageOutterMargin, (ScreenW-2*imageOutterMargin)*9/16.0);
+        return CGSizeMake(ImageBackViewW, ImageBackViewW*9/16.0);
     }
     
     //共几行
     NSInteger row = (imageCount - 1)/3 +1;
     
     //图片的宽高
-    CGFloat imageWH = (ScreenW - 2*imageOutterMargin -2*imageIntterMargin)/3;
+    CGFloat imageWH = (ImageBackViewW - 2*ImageOutterMargin -2*ImageIntterMargin)/3;
     
-    return CGSizeMake(ScreenW, imageOutterMargin + row*imageWH +(row-1)*imageIntterMargin);
+    return CGSizeMake(ImageBackViewW, 2*ImageOutterMargin + row*imageWH +(row-1)*ImageIntterMargin);
 }
 
 #pragma mark -点击图片
 - (void)p_TapImageView:(UIGestureRecognizer *)gesture{
     
+    UIImageView *imageV = (UIImageView *)gesture.view;
     
+    NSInteger currentImageIndex = imageV.tag;
+    //针对四张图片处理
+    if (currentImageIndex > 2 && self.imageUrls.count == 4) {
+        
+        currentImageIndex -= 1;
+    }
+    //若有大图URL 可通过KVC从各个的Model中直接读取
+//    NSArray *urls = [self.imageUrls valueForKey:@""];
+    
+    //将可见的ImageView集合
+    NSMutableArray *imageViews = [NSMutableArray array];
+    for (UIImageView *imageV in self.subviews) {
+        
+        if (!imageV.isHidden) {
+            [imageViews addObject:imageV];
+        }
+    }
+    
+    JPPhotoBrowserController *photoController = [[JPPhotoBrowserController alloc] init];
+    photoController.imageViews = imageViews;
+    photoController.imageUrls = self.imageUrls;
+    photoController.currentImageIndex = currentImageIndex;
+    photoController.modalPresentationStyle = UIModalPresentationCustom;
+    [self.superController presentViewController:photoController animated:YES completion:nil];
+    
+//    NSDictionary *infoDict = @{SelectedImageNotificationImageIndexKeyName:@(currentImageIndex),
+//                               SelectedImageNotificationImageUrlsKeyName:self.imageUrls,
+//                               SelectedImageNotificationImageViewsKeyName:imageViews};
+//    
+//    [[NSNotificationCenter defaultCenter] postNotificationName:SelectedImageNotificationName object:nil userInfo:infoDict];
 }
 
 @end

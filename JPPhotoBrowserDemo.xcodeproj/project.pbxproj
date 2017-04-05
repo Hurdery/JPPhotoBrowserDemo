@@ -7,21 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A22FD09C1E948AF90039D6A4 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = A22FD08E1E948AF90039D6A4 /* UIImage+Extension.m */; };
+		A22FD09D1E948AF90039D6A4 /* UIImageView+JPWebImage.m in Sources */ = {isa = PBXBuildFile; fileRef = A22FD0901E948AF90039D6A4 /* UIImageView+JPWebImage.m */; };
+		A22FD09E1E948AF90039D6A4 /* UIView+JP_Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = A22FD0921E948AF90039D6A4 /* UIView+JP_Frame.m */; };
+		A22FD09F1E948AF90039D6A4 /* JPImageShowBackView.m in Sources */ = {isa = PBXBuildFile; fileRef = A22FD0951E948AF90039D6A4 /* JPImageShowBackView.m */; };
+		A22FD0A01E948AF90039D6A4 /* JPPhotoBrowserAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = A22FD0971E948AF90039D6A4 /* JPPhotoBrowserAnimator.m */; };
+		A22FD0A11E948AF90039D6A4 /* JPPhotoBrowserController.m in Sources */ = {isa = PBXBuildFile; fileRef = A22FD0991E948AF90039D6A4 /* JPPhotoBrowserController.m */; };
+		A22FD0A21E948AF90039D6A4 /* JPPhotoShowController.m in Sources */ = {isa = PBXBuildFile; fileRef = A22FD09B1E948AF90039D6A4 /* JPPhotoShowController.m */; };
+		A22FD0A51E9492B80039D6A4 /* BaseExternConst.m in Sources */ = {isa = PBXBuildFile; fileRef = A22FD0A41E9492B80039D6A4 /* BaseExternConst.m */; };
 		A2B585C11E8F8EDD0000F938 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B585C01E8F8EDD0000F938 /* main.m */; };
 		A2B585C41E8F8EDD0000F938 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B585C31E8F8EDD0000F938 /* AppDelegate.m */; };
 		A2B585C71E8F8EDD0000F938 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B585C61E8F8EDD0000F938 /* ViewController.m */; };
 		A2B585CA1E8F8EDD0000F938 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2B585C81E8F8EDD0000F938 /* Main.storyboard */; };
 		A2B585CC1E8F8EDD0000F938 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2B585CB1E8F8EDD0000F938 /* Assets.xcassets */; };
 		A2B585CF1E8F8EDD0000F938 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2B585CD1E8F8EDD0000F938 /* LaunchScreen.storyboard */; };
-		A2B585D81E8F90EC0000F938 /* MoreImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B585D71E8F90EC0000F938 /* MoreImageViewController.m */; };
-		A2B585DC1E8F93980000F938 /* JPMoreImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B585DB1E8F93980000F938 /* JPMoreImageView.m */; };
-		A2B585DF1E8F94440000F938 /* JPPhotoBrowserController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B585DE1E8F94440000F938 /* JPPhotoBrowserController.m */; };
-		A2B585E21E8F94550000F938 /* JPPhotoShowController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B585E11E8F94550000F938 /* JPPhotoShowController.m */; };
-		A2B585E51E8F94980000F938 /* JPPhotoBrowserAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B585E41E8F94980000F938 /* JPPhotoBrowserAnimator.m */; };
-		A2B585E81E8F9EAE0000F938 /* UIView+JP_Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B585E71E8F9EAE0000F938 /* UIView+JP_Frame.m */; };
+		A2B585D81E8F90EC0000F938 /* ImageShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B585D71E8F90EC0000F938 /* ImageShowViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A22FD08D1E948AF90039D6A4 /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
+		A22FD08E1E948AF90039D6A4 /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
+		A22FD08F1E948AF90039D6A4 /* UIImageView+JPWebImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+JPWebImage.h"; sourceTree = "<group>"; };
+		A22FD0901E948AF90039D6A4 /* UIImageView+JPWebImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+JPWebImage.m"; sourceTree = "<group>"; };
+		A22FD0911E948AF90039D6A4 /* UIView+JP_Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JP_Frame.h"; sourceTree = "<group>"; };
+		A22FD0921E948AF90039D6A4 /* UIView+JP_Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JP_Frame.m"; sourceTree = "<group>"; };
+		A22FD0941E948AF90039D6A4 /* JPImageShowBackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPImageShowBackView.h; sourceTree = "<group>"; };
+		A22FD0951E948AF90039D6A4 /* JPImageShowBackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPImageShowBackView.m; sourceTree = "<group>"; };
+		A22FD0961E948AF90039D6A4 /* JPPhotoBrowserAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPPhotoBrowserAnimator.h; sourceTree = "<group>"; };
+		A22FD0971E948AF90039D6A4 /* JPPhotoBrowserAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPPhotoBrowserAnimator.m; sourceTree = "<group>"; };
+		A22FD0981E948AF90039D6A4 /* JPPhotoBrowserController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPPhotoBrowserController.h; sourceTree = "<group>"; };
+		A22FD0991E948AF90039D6A4 /* JPPhotoBrowserController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPPhotoBrowserController.m; sourceTree = "<group>"; };
+		A22FD09A1E948AF90039D6A4 /* JPPhotoShowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPPhotoShowController.h; sourceTree = "<group>"; };
+		A22FD09B1E948AF90039D6A4 /* JPPhotoShowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPPhotoShowController.m; sourceTree = "<group>"; };
+		A22FD0A31E9492B80039D6A4 /* BaseExternConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseExternConst.h; sourceTree = "<group>"; };
+		A22FD0A41E9492B80039D6A4 /* BaseExternConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseExternConst.m; sourceTree = "<group>"; };
 		A2B585BC1E8F8EDD0000F938 /* JPPhotoBrowserDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JPPhotoBrowserDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2B585C01E8F8EDD0000F938 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A2B585C21E8F8EDD0000F938 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -32,18 +51,8 @@
 		A2B585CB1E8F8EDD0000F938 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2B585CE1E8F8EDD0000F938 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A2B585D01E8F8EDD0000F938 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A2B585D61E8F90EC0000F938 /* MoreImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreImageViewController.h; sourceTree = "<group>"; };
-		A2B585D71E8F90EC0000F938 /* MoreImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreImageViewController.m; sourceTree = "<group>"; };
-		A2B585DA1E8F93980000F938 /* JPMoreImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPMoreImageView.h; sourceTree = "<group>"; };
-		A2B585DB1E8F93980000F938 /* JPMoreImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPMoreImageView.m; sourceTree = "<group>"; };
-		A2B585DD1E8F94440000F938 /* JPPhotoBrowserController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPPhotoBrowserController.h; sourceTree = "<group>"; };
-		A2B585DE1E8F94440000F938 /* JPPhotoBrowserController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPPhotoBrowserController.m; sourceTree = "<group>"; };
-		A2B585E01E8F94550000F938 /* JPPhotoShowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPPhotoShowController.h; sourceTree = "<group>"; };
-		A2B585E11E8F94550000F938 /* JPPhotoShowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPPhotoShowController.m; sourceTree = "<group>"; };
-		A2B585E31E8F94980000F938 /* JPPhotoBrowserAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPPhotoBrowserAnimator.h; sourceTree = "<group>"; };
-		A2B585E41E8F94980000F938 /* JPPhotoBrowserAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPPhotoBrowserAnimator.m; sourceTree = "<group>"; };
-		A2B585E61E8F9EAE0000F938 /* UIView+JP_Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JP_Frame.h"; sourceTree = "<group>"; };
-		A2B585E71E8F9EAE0000F938 /* UIView+JP_Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JP_Frame.m"; sourceTree = "<group>"; };
+		A2B585D61E8F90EC0000F938 /* ImageShowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageShowViewController.h; sourceTree = "<group>"; };
+		A2B585D71E8F90EC0000F938 /* ImageShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageShowViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +66,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A22FD08C1E948AF90039D6A4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A22FD08D1E948AF90039D6A4 /* UIImage+Extension.h */,
+				A22FD08E1E948AF90039D6A4 /* UIImage+Extension.m */,
+				A22FD08F1E948AF90039D6A4 /* UIImageView+JPWebImage.h */,
+				A22FD0901E948AF90039D6A4 /* UIImageView+JPWebImage.m */,
+				A22FD0911E948AF90039D6A4 /* UIView+JP_Frame.h */,
+				A22FD0921E948AF90039D6A4 /* UIView+JP_Frame.m */,
+				A22FD0A31E9492B80039D6A4 /* BaseExternConst.h */,
+				A22FD0A41E9492B80039D6A4 /* BaseExternConst.m */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A22FD0931E948AF90039D6A4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A22FD0941E948AF90039D6A4 /* JPImageShowBackView.h */,
+				A22FD0951E948AF90039D6A4 /* JPImageShowBackView.m */,
+				A22FD0961E948AF90039D6A4 /* JPPhotoBrowserAnimator.h */,
+				A22FD0971E948AF90039D6A4 /* JPPhotoBrowserAnimator.m */,
+				A22FD0981E948AF90039D6A4 /* JPPhotoBrowserController.h */,
+				A22FD0991E948AF90039D6A4 /* JPPhotoBrowserController.m */,
+				A22FD09A1E948AF90039D6A4 /* JPPhotoShowController.h */,
+				A22FD09B1E948AF90039D6A4 /* JPPhotoShowController.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		A2B585B31E8F8EDD0000F938 = {
 			isa = PBXGroup;
 			children = (
@@ -81,8 +120,8 @@
 				A2B585C31E8F8EDD0000F938 /* AppDelegate.m */,
 				A2B585C51E8F8EDD0000F938 /* ViewController.h */,
 				A2B585C61E8F8EDD0000F938 /* ViewController.m */,
-				A2B585D61E8F90EC0000F938 /* MoreImageViewController.h */,
-				A2B585D71E8F90EC0000F938 /* MoreImageViewController.m */,
+				A2B585D61E8F90EC0000F938 /* ImageShowViewController.h */,
+				A2B585D71E8F90EC0000F938 /* ImageShowViewController.m */,
 				A2B585C81E8F8EDD0000F938 /* Main.storyboard */,
 				A2B585CB1E8F8EDD0000F938 /* Assets.xcassets */,
 				A2B585CD1E8F8EDD0000F938 /* LaunchScreen.storyboard */,
@@ -103,16 +142,8 @@
 		A2B585D91E8F91160000F938 /* JPPhotoBrowser */ = {
 			isa = PBXGroup;
 			children = (
-				A2B585E61E8F9EAE0000F938 /* UIView+JP_Frame.h */,
-				A2B585E71E8F9EAE0000F938 /* UIView+JP_Frame.m */,
-				A2B585DA1E8F93980000F938 /* JPMoreImageView.h */,
-				A2B585DB1E8F93980000F938 /* JPMoreImageView.m */,
-				A2B585DD1E8F94440000F938 /* JPPhotoBrowserController.h */,
-				A2B585DE1E8F94440000F938 /* JPPhotoBrowserController.m */,
-				A2B585E01E8F94550000F938 /* JPPhotoShowController.h */,
-				A2B585E11E8F94550000F938 /* JPPhotoShowController.m */,
-				A2B585E31E8F94980000F938 /* JPPhotoBrowserAnimator.h */,
-				A2B585E41E8F94980000F938 /* JPPhotoBrowserAnimator.m */,
+				A22FD08C1E948AF90039D6A4 /* Extensions */,
+				A22FD0931E948AF90039D6A4 /* Views */,
 			);
 			path = JPPhotoBrowser;
 			sourceTree = "<group>";
@@ -188,14 +219,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A22FD09C1E948AF90039D6A4 /* UIImage+Extension.m in Sources */,
+				A22FD0A21E948AF90039D6A4 /* JPPhotoShowController.m in Sources */,
+				A22FD0A11E948AF90039D6A4 /* JPPhotoBrowserController.m in Sources */,
+				A22FD0A01E948AF90039D6A4 /* JPPhotoBrowserAnimator.m in Sources */,
 				A2B585C71E8F8EDD0000F938 /* ViewController.m in Sources */,
-				A2B585E21E8F94550000F938 /* JPPhotoShowController.m in Sources */,
-				A2B585D81E8F90EC0000F938 /* MoreImageViewController.m in Sources */,
+				A22FD09F1E948AF90039D6A4 /* JPImageShowBackView.m in Sources */,
+				A22FD09E1E948AF90039D6A4 /* UIView+JP_Frame.m in Sources */,
+				A2B585D81E8F90EC0000F938 /* ImageShowViewController.m in Sources */,
+				A22FD0A51E9492B80039D6A4 /* BaseExternConst.m in Sources */,
+				A22FD09D1E948AF90039D6A4 /* UIImageView+JPWebImage.m in Sources */,
 				A2B585C41E8F8EDD0000F938 /* AppDelegate.m in Sources */,
-				A2B585E81E8F9EAE0000F938 /* UIView+JP_Frame.m in Sources */,
-				A2B585DF1E8F94440000F938 /* JPPhotoBrowserController.m in Sources */,
-				A2B585DC1E8F93980000F938 /* JPMoreImageView.m in Sources */,
-				A2B585E51E8F94980000F938 /* JPPhotoBrowserAnimator.m in Sources */,
 				A2B585C11E8F8EDD0000F938 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -353,6 +387,7 @@
 				A2B585D51E8F8EDD0000F938 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
