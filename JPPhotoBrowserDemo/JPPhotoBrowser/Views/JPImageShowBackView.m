@@ -149,11 +149,7 @@
     photoController.modalPresentationStyle = UIModalPresentationCustom;
     [self.superController presentViewController:photoController animated:YES completion:nil];
     
-//    NSDictionary *infoDict = @{SelectedImageNotificationImageIndexKeyName:@(currentImageIndex),
-//                               SelectedImageNotificationImageUrlsKeyName:self.imageUrls,
-//                               SelectedImageNotificationImageViewsKeyName:imageViews};
-//    
-//    [[NSNotificationCenter defaultCenter] postNotificationName:SelectedImageNotificationName object:nil userInfo:infoDict];
+
 }
 
 @end

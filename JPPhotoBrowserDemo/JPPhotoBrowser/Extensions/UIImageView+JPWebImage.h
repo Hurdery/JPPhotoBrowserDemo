@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^downloadImageBlock)(UIImage *image);
+
 @interface UIImageView (JPWebImage)
 
 /**
@@ -39,4 +41,15 @@
           placeholderImage:(UIImage *)placeholder
               cornerRadius:(CGFloat)cornerRadius;
 
+/**
+ 下载图片并block返回已下载的图片
+
+ @param url 图片URL
+ @param placeholder 占位图
+ @param downloadImageBlock block返回已下载的图片
+ */
+- (void)jp_setImageWithURL:(NSURL *)url
+          placeholderImage:(UIImage *)placeholder
+//        downloadImageBlock:(void(^)(UIImage *image)) downloadImageBlock;
+        downloadImageBlock:(downloadImageBlock)downloadImageBlock;
 @end

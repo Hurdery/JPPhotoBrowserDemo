@@ -8,7 +8,25 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol JPPhotoShowControllerDelegate <NSObject>
+
+- (void)tapImage;
+
+@end
+
+
 //负责单张照片的显示的控制器
 @interface JPPhotoShowController : UIViewController
+
+- (instancetype)initWithImageUrl:(NSString *)url PlaceholderImage:(UIImage *)placeholderImage SelectedIndex:(NSInteger)index;
+
+/** imageUrl */
+@property(nonatomic,strong)NSString *imageUrl;
+@property(nonatomic,strong)UIImage *placeholderImage;
+@property(nonatomic,assign)NSInteger  selectIndex;
+
+/** delegate */
+@property(nonatomic,assign) id<JPPhotoShowControllerDelegate> delegate;
+
 
 @end

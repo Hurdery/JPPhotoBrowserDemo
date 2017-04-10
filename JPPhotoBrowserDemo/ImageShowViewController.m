@@ -27,7 +27,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     //宽高可以随便写 XY必须确定
-    _imageShowBackView = [[JPImageShowBackView alloc] initWithFrame:CGRectMake(0, 100, 35, 40)];
+    _imageShowBackView = [[JPImageShowBackView alloc] initWithFrame:CGRectMake(0, 100, 0, 0)];
     _imageShowBackView.imageUrls = @[@"http://wx3.sinaimg.cn/mw690/66755707gy1fe9gyjk2sxj20m80m80zq.jpg",
                                      @"http://wx4.sinaimg.cn/mw690/66755707ly1febk0z9b37j20990dwwrf.jpg",
                                      @"http://wx2.sinaimg.cn/mw690/0069ptwkgy1feb1dmjg52j30hs0b8dgr.jpg",
@@ -39,16 +39,7 @@
                                      @"http://wx2.sinaimg.cn/mw690/66755707ly1feadf9082gj20b10gon6j.jpg"];
     _imageShowBackView.superController = self;
     [self.view addSubview:_imageShowBackView];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(p_TapImageView:) name:SelectedImageNotificationName object:nil];
-}
 
-
-#pragma mark - tapImageView
-- (void)p_TapImageView:(NSNotification *)notification {
-    
-    NSDictionary *infoDict = notification.userInfo;
-    
 }
 
 
