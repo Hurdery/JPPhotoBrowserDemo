@@ -14,7 +14,6 @@
 		A22FD0A01E948AF90039D6A4 /* JPPhotoBrowserAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = A22FD0971E948AF90039D6A4 /* JPPhotoBrowserAnimator.m */; };
 		A22FD0A11E948AF90039D6A4 /* JPPhotoBrowserController.m in Sources */ = {isa = PBXBuildFile; fileRef = A22FD0991E948AF90039D6A4 /* JPPhotoBrowserController.m */; };
 		A22FD0A21E948AF90039D6A4 /* JPPhotoShowController.m in Sources */ = {isa = PBXBuildFile; fileRef = A22FD09B1E948AF90039D6A4 /* JPPhotoShowController.m */; };
-		A22FD0A51E9492B80039D6A4 /* BaseExternConst.m in Sources */ = {isa = PBXBuildFile; fileRef = A22FD0A41E9492B80039D6A4 /* BaseExternConst.m */; };
 		A2B585C11E8F8EDD0000F938 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B585C01E8F8EDD0000F938 /* main.m */; };
 		A2B585C41E8F8EDD0000F938 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B585C31E8F8EDD0000F938 /* AppDelegate.m */; };
 		A2B585C71E8F8EDD0000F938 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B585C61E8F8EDD0000F938 /* ViewController.m */; };
@@ -39,8 +38,6 @@
 		A22FD0991E948AF90039D6A4 /* JPPhotoBrowserController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPPhotoBrowserController.m; sourceTree = "<group>"; };
 		A22FD09A1E948AF90039D6A4 /* JPPhotoShowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPPhotoShowController.h; sourceTree = "<group>"; };
 		A22FD09B1E948AF90039D6A4 /* JPPhotoShowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPPhotoShowController.m; sourceTree = "<group>"; };
-		A22FD0A31E9492B80039D6A4 /* BaseExternConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseExternConst.h; sourceTree = "<group>"; };
-		A22FD0A41E9492B80039D6A4 /* BaseExternConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseExternConst.m; sourceTree = "<group>"; };
 		A2B585BC1E8F8EDD0000F938 /* JPPhotoBrowserDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JPPhotoBrowserDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2B585C01E8F8EDD0000F938 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A2B585C21E8F8EDD0000F938 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -75,8 +72,6 @@
 				A22FD0901E948AF90039D6A4 /* UIImageView+JPWebImage.m */,
 				A22FD0911E948AF90039D6A4 /* UIView+JP_Frame.h */,
 				A22FD0921E948AF90039D6A4 /* UIView+JP_Frame.m */,
-				A22FD0A31E9492B80039D6A4 /* BaseExternConst.h */,
-				A22FD0A41E9492B80039D6A4 /* BaseExternConst.m */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -227,7 +222,6 @@
 				A22FD09F1E948AF90039D6A4 /* JPImageShowBackView.m in Sources */,
 				A22FD09E1E948AF90039D6A4 /* UIView+JP_Frame.m in Sources */,
 				A2B585D81E8F90EC0000F938 /* ImageShowViewController.m in Sources */,
-				A22FD0A51E9492B80039D6A4 /* BaseExternConst.m in Sources */,
 				A22FD09D1E948AF90039D6A4 /* UIImageView+JPWebImage.m in Sources */,
 				A2B585C41E8F8EDD0000F938 /* AppDelegate.m in Sources */,
 				A2B585C11E8F8EDD0000F938 /* main.m in Sources */,

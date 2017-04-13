@@ -11,12 +11,17 @@
 //负责多张照片的显示的控制器  负责照片交互
 @interface JPPhotoBrowserController : UIViewController
 
-/** 大图Urls */
-@property(nonatomic,strong)NSArray <NSString *>*imageUrls;
 
-/** imageViews */
-@property(nonatomic,strong)NSArray <UIImageView *>*imageViews;
+/**
+ 重写构造函数
 
-/** 当前点击的图片序号 */
-@property(nonatomic,assign)NSInteger currentImageIndex;
+ @param imageUrls 大图的Url集合
+ @param imageViews 小图的View的集合
+ @param currentImageIndex 当前点击的序号
+ @return return value description
+ */
+- (instancetype)initWithImageUrls:(NSArray <NSString *>*)imageUrls
+                       imageViews:(NSArray <UIImageView *>*)imageViews
+                            index:(NSInteger)currentImageIndex;
+
 @end

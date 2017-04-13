@@ -9,6 +9,13 @@
 #import "JPImageShowBackView.h"
 #import "JPPhotoBrowserController.h"
 
+//控制图片底部显示范围 可自定义调节
+#define ImageBackViewW [UIScreen mainScreen].bounds.size.width
+//图片之间的间距
+static  CGFloat ImageIntterMargin = 8;
+//图片和底部View的上下左右间距
+static  CGFloat ImageOutterMargin = 12;
+
 @implementation JPImageShowBackView
 
 - (instancetype)initWithFrame:(CGRect)frame
@@ -24,8 +31,8 @@
 #pragma mark - 设置图片UI
 - (void)p_SetupImagesUI{
     
-
-    self.backgroundColor = [UIColor yellowColor];
+    //配置当前底部View的背景色
+    self.backgroundColor = [UIColor lightGrayColor];
     
     //超出边界的内容不显示
     self.clipsToBounds = YES;
@@ -36,7 +43,6 @@
     for (NSInteger i = 0; i < count*count; i++) {
         
         UIImageView *imageV = [[UIImageView alloc] init];
-        imageV.backgroundColor = [UIColor orangeColor];
         imageV.hidden = YES;
         [self addSubview:imageV];
         
@@ -67,29 +73,30 @@
 }
 
 #pragma mark -设置图片
-- (void)setImageUrls:(NSArray<NSString *> *)imageUrls {
+- (void)setSmallImageUrls:(NSArray<NSString *> *)smallImageUrls {
     
-    _imageUrls = imageUrls;
+    _smallImageUrls = smallImageUrls;
     
-    for (NSInteger i = 0; i < imageUrls.count; i++) {
+    for (NSInteger i = 0; i < smallImageUrls.count; i++) {
         
         UIImageView *imageV;
         
         imageV = (UIImageView *)self.subviews[i];
         
         //四张图特殊处理
-        if (i > 1 & imageUrls.count == 4) {
+        if (i > 1 & smallImageUrls.count == 4) {
             imageV = (UIImageView *)self.subviews[i+1];
         }
         imageV.hidden = NO;
         
-        [imageV jp_setImageWithURL:[NSURL URLWithString:imageUrls[i]] placeholderImage:nil];
+        //使用自定义下载
+        [imageV jp_setImageWithURL:[NSURL URLWithString:smallImageUrls[i]] placeholderImage:nil];
     }
     
-    self.jp_h = [self p_UpdateViewHeightWithImageCount:imageUrls.count].height;
-    self.jp_w = [self p_UpdateViewHeightWithImageCount:imageUrls.count].width;
+    self.jp_h = [self p_UpdateViewHeightWithImageCount:smallImageUrls.count].height;
+    self.jp_w = [self p_UpdateViewHeightWithImageCount:smallImageUrls.count].width;
     
-    if (imageUrls.count == 1) {
+    if (smallImageUrls.count == 1) {
         
         UIImageView *firstImage = (UIImageView *)self.subviews.firstObject;
         firstImage.jp_w = self.jp_w - 2*ImageOutterMargin;
@@ -122,11 +129,17 @@
 #pragma mark -点击图片
 - (void)p_TapImageView:(UIGestureRecognizer *)gesture{
     
+    if (self.smallImageUrls.count != self.largeImageUrls.count) {
+        
+        NSLog(@"JPImageShowBackView.m -- 134行  大小图个数不对应");
+        return;
+    }
+    
     UIImageView *imageV = (UIImageView *)gesture.view;
     
     NSInteger currentImageIndex = imageV.tag;
     //针对四张图片处理
-    if (currentImageIndex > 2 && self.imageUrls.count == 4) {
+    if (currentImageIndex > 2 && self.smallImageUrls.count == 4) {
         
         currentImageIndex -= 1;
     }
@@ -142,12 +155,10 @@
         }
     }
     
-    JPPhotoBrowserController *photoController = [[JPPhotoBrowserController alloc] init];
-    photoController.imageViews = imageViews;
-    photoController.imageUrls = self.imageUrls;
-    photoController.currentImageIndex = currentImageIndex;
+    JPPhotoBrowserController *photoController = [[JPPhotoBrowserController alloc] initWithImageUrls:self.largeImageUrls imageViews:imageViews index:currentImageIndex];
     photoController.modalPresentationStyle = UIModalPresentationCustom;
     [self.superController presentViewController:photoController animated:YES completion:nil];
+    
     
 
 }

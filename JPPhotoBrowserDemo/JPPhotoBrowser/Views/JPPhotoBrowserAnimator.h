@@ -7,8 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 //负责自定义转场
-@interface JPPhotoBrowserAnimator : NSObject
+@interface JPPhotoBrowserAnimator : NSObject<UIViewControllerTransitioningDelegate,UIViewControllerAnimatedTransitioning>
+
+/** 九宫格的小图View */
+@property(nonatomic,strong) UIImageView *animationImageView;
+
+/** 当前显示的大图View */
+@property(nonatomic,strong) UIImageView *currentImageView;
+
 
 @end

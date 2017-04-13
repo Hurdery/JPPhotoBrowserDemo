@@ -9,15 +9,17 @@
 #import <UIKit/UIKit.h>
 #import "UIView+JP_Frame.h"
 #import "UIImageView+JPWebImage.h"
-#import "BaseExternConst.h"
 
 //显示多张照片的View 独立模块
 @interface JPImageShowBackView : UIView
 
-/** 单张图片的URL集合 */
-@property(nonatomic,strong)NSArray <NSString *>*imageUrls;
+//三个属性均为必传属性
 
-/** 父控制器(用来跳转) */
+/** 单张大图片的URL集合 用于显示浏览大图*/
+@property(nonatomic,strong)NSArray <NSString *>*largeImageUrls;
+/** 单张小图的URL集合 用于显示九宫格小图*/
+@property(nonatomic,strong)NSArray <NSString *>*smallImageUrls;
+/** showView的父控制器(用来跳转) */
 @property(nonatomic,strong)UIViewController *superController;
 
 @end

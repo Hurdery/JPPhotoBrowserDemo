@@ -15,8 +15,7 @@
 
 /** scroll */
 @property(nonatomic,strong) UIScrollView *scrollView;
-/** imageView */
-@property(nonatomic,strong) UIImageView *imageV;
+
 
 
 @end
@@ -95,7 +94,7 @@
     CGSize imageSize = image.size;
     //需要设置的尺寸
     CGSize size = CGSizeZero;
-    size.width = screenSize.width;
+    size.width = screenSize.width*scale;
     size.height = size.width *imageSize.height / imageSize.width;
     //设置图片位置
     _imageV.frame = CGRectMake(0, 0, size.width, size.height);
@@ -130,7 +129,31 @@
 /** 双击 */
 - (void)p_DoubleTapImage {
     
+    CGFloat scale = self.scrollView.zoomScale < 2 ? 2 : 1;
     
+    [UIView animateWithDuration:0.3 animations:^{
+        self.scrollView.zoomScale = scale;
+    
+    }];
+}
+
+//UIScrollViewDelegate
+- (void)scrollViewDidZoom:(UIScrollView *)scrollView {
+    
+    [self p_SetImageSizeWithImage:self.imageV.image scale:scrollView.zoomScale];
+}
+
+- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
+    
+    return self.imageV;
+}
+
+//保证翻页时当前图片 恢复原大小
+- (void)viewDidDisappear:(BOOL)animated {
+    
+    [super viewDidDisappear:animated];
+    
+    self.scrollView.zoomScale = 1;
 }
 
 
