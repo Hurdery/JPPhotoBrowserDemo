@@ -26,8 +26,11 @@ photoController.modalPresentationStyle = UIModalPresentationCustom;
 //对于第二种情况下 在需要展示九宫格的控制器(控制器的View上)加上九宫格展示View 后续逻辑无需再管 三个属性为必传
 //宽高可以随便写 XY必须确定
 _imageShowBackView = [[JPImageShowBackView alloc] initWithFrame:CGRectMake(0, 100, 0, 0)];
+//小图的URL集合
 _imageShowBackView.smallImageUrls = smallImageUrls;
+//大图的URL集合 保证两个数组个数相同
 _imageShowBackView.largeImageUrls = largeImageUrls;
+//需要执行跳转的控制器(一般为当前View所在的控制器)
 _imageShowBackView.superController = self;
 [self.view addSubview:_imageShowBackView];
 
