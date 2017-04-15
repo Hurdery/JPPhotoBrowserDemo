@@ -156,6 +156,7 @@ static  CGFloat ImageOutterMargin = 12;
     }
     
     JPPhotoBrowserController *photoController = [[JPPhotoBrowserController alloc] initWithImageUrls:self.largeImageUrls imageViews:imageViews index:currentImageIndex];
+    //如果此处不指定自定义转场 那么会使用默认的转场
     photoController.modalPresentationStyle = UIModalPresentationCustom;
     [self.superController presentViewController:photoController animated:YES completion:nil];
     
