@@ -1,15 +1,18 @@
 # JPPhotoBrowserDemo       
 
 - 需要将文件夹 JPPhotoBrowser 拖入程序中  
-###目录结构 
-- Extensions    
--UIImageView+JPWebImage 图片下载
--UIView+JP_Frame 重写个头/set方法
-- Views
--JPImageShowBackView 九宫格布局View(若存在不必引用 可删除)
--JPPhotoBrowserController 负责照片浏览的控制器
--JPPhotoShowController 负责单张照片显示的控制器
--JPPhotoBrowserAnimator 自定义转场
+
+----------
+
+### 目录结构 
+- #### Extensions    
+- UIImageView+JPWebImage 图片下载
+- UIView+JP_Frame 重写个头/set方法
+- #### Views
+- JPImageShowBackView 九宫格布局View(若存在不必引用 可删除)
+- JPPhotoBrowserController 负责照片浏览的控制器
+- JPPhotoShowController 负责单张照片显示的控制器
+- JPPhotoBrowserAnimator 自定义转场
 
 ----------
 
