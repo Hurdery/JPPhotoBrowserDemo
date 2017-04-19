@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A22FD09C1E948AF90039D6A4 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = A22FD08E1E948AF90039D6A4 /* UIImage+Extension.m */; };
 		A22FD09D1E948AF90039D6A4 /* UIImageView+JPWebImage.m in Sources */ = {isa = PBXBuildFile; fileRef = A22FD0901E948AF90039D6A4 /* UIImageView+JPWebImage.m */; };
 		A22FD09E1E948AF90039D6A4 /* UIView+JP_Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = A22FD0921E948AF90039D6A4 /* UIView+JP_Frame.m */; };
 		A22FD09F1E948AF90039D6A4 /* JPImageShowBackView.m in Sources */ = {isa = PBXBuildFile; fileRef = A22FD0951E948AF90039D6A4 /* JPImageShowBackView.m */; };
@@ -24,8 +23,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A22FD08D1E948AF90039D6A4 /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
-		A22FD08E1E948AF90039D6A4 /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
 		A22FD08F1E948AF90039D6A4 /* UIImageView+JPWebImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+JPWebImage.h"; sourceTree = "<group>"; };
 		A22FD0901E948AF90039D6A4 /* UIImageView+JPWebImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+JPWebImage.m"; sourceTree = "<group>"; };
 		A22FD0911E948AF90039D6A4 /* UIView+JP_Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JP_Frame.h"; sourceTree = "<group>"; };
@@ -66,8 +63,6 @@
 		A22FD08C1E948AF90039D6A4 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				A22FD08D1E948AF90039D6A4 /* UIImage+Extension.h */,
-				A22FD08E1E948AF90039D6A4 /* UIImage+Extension.m */,
 				A22FD08F1E948AF90039D6A4 /* UIImageView+JPWebImage.h */,
 				A22FD0901E948AF90039D6A4 /* UIImageView+JPWebImage.m */,
 				A22FD0911E948AF90039D6A4 /* UIView+JP_Frame.h */,
@@ -214,7 +209,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A22FD09C1E948AF90039D6A4 /* UIImage+Extension.m in Sources */,
 				A22FD0A21E948AF90039D6A4 /* JPPhotoShowController.m in Sources */,
 				A22FD0A11E948AF90039D6A4 /* JPPhotoBrowserController.m in Sources */,
 				A22FD0A01E948AF90039D6A4 /* JPPhotoBrowserAnimator.m in Sources */,

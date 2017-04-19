@@ -7,7 +7,7 @@
 //
 
 #import "UIImageView+JPWebImage.h"
-#import "UIImage+Extension.h"
+
 
 @implementation UIImageView (JPWebImage)
 
@@ -42,13 +42,13 @@
     NSData *saveData = [NSData dataWithContentsOfFile:pathString];
     UIImage *saveImage = placeholder;
     //占位图
-    self.image = [saveImage jp_cornerImageWithSize:self.bounds.size cornerRadius:cornerRadius fillColor:self.superview.backgroundColor];
+    self.image = saveImage;
     //本地缓存
     if (saveData) {
         saveImage = [UIImage imageWithData:saveData];
         //不做剪切处理
         self.image = saveImage;
-//        self.image = [saveImage jp_cornerImageWithSize:self.bounds.size cornerRadius:cornerRadius fillColor:self.superview.backgroundColor];
+
         return;
     }
     //创建会话对象
@@ -66,9 +66,6 @@
             }
             //不做剪切处理
             self.image = saveImage;
-//            [saveImage jp_asynCornerImageWithSize:self.bounds.size cornerRadius:cornerRadius fillColor:self.superview.backgroundColor completion:^(UIImage *resultImage) {
-//                self.image = resultImage;
-//            }];
         });
     }];
     //发送请求
@@ -97,7 +94,7 @@
     NSData *saveData = [NSData dataWithContentsOfFile:pathString];
     UIImage *saveImage = placeholder;
     //占位图
-    self.image = [saveImage jp_cornerImageWithSize:self.bounds.size cornerRadius:0 fillColor:self.superview.backgroundColor];
+    self.image = saveImage;
     //本地缓存
     if (saveData) {
         saveImage = [UIImage imageWithData:saveData];
@@ -107,7 +104,6 @@
             downloadImageBlock(saveImage);
         }
 
-        //        self.image = [saveImage jp_cornerImageWithSize:self.bounds.size cornerRadius:cornerRadius fillColor:self.superview.backgroundColor];
         return;
     }
     //创建会话对象
@@ -128,9 +124,6 @@
             if (downloadImageBlock) {
                 downloadImageBlock(saveImage);
             }
-            //            [saveImage jp_asynCornerImageWithSize:self.bounds.size cornerRadius:cornerRadius fillColor:self.superview.backgroundColor completion:^(UIImage *resultImage) {
-            //                self.image = resultImage;
-            //            }];
         });
     }];
     //发送请求
