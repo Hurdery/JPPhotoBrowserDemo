@@ -7,7 +7,7 @@
 ### 目录结构 
 - #### Extensions    
 - UIImageView+JPWebImage 图片下载
-- UIView+JP_Frame 重写个头/set方法
+- UIView+JP_Frame 重写get/set方法
 - #### Views
 - JPImageShowBackView 九宫格布局View(若存在不必引用 可删除)
 - JPPhotoBrowserController 负责照片浏览的控制器
